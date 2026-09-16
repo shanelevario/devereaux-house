@@ -106,6 +106,7 @@ body.menu-open .panel{display:flex}
 .content p{margin:0 0 1.15em;max-width:32em}
 .content a.line{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}
 .page-title{display:none;margin:0 0 1.1rem;font-size:clamp(2rem,9vw,2.6rem);line-height:1}
+.page-title.always{display:block;font-size:clamp(1.55rem,2.6vw,2.1rem);margin-bottom:1.4rem}
 
 .rule-h{margin:0;padding:1rem 0 .9rem;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.05}
 
@@ -120,8 +121,9 @@ body.menu-open .panel{display:flex}
   .rail .nav{display:none}
   .mark{width:min(45vw,225px)}
   .burger{display:block}
-  .page-title{display:block}
-  .content{margin-left:0;max-width:100%;padding:var(--pad) var(--pad) 6.5rem}
+  .page-title{display:block;padding-right:3.4rem}
+  .page-title.always{font-size:clamp(2rem,9vw,2.6rem)}
+  .content{margin-left:0;max-width:100%;padding:var(--pad) var(--pad) 9rem;min-height:100dvh}
 }
 
 /* ---------- list pages: sticky chips, ruled sections, item rows (their Wine page) ---------- */
