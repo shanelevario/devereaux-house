@@ -166,7 +166,8 @@ body.menu-open .panel{display:flex}
 }
 
 .intro{max-width:32em;margin:0 0 1.6rem}
-.ot{width:100%;max-width:400px;height:300px;border:0;display:block;margin:0 0 1.6rem}
+.ot{width:100%;max-width:400px;margin:0 0 1.6rem}
+.ot iframe{max-width:100%}
 .walk{color:var(--ink-2);font-size:.92em;max-width:32em;margin:0}
 </style>
 
@@ -203,12 +204,13 @@ body.menu-open .panel{display:flex}
 <main class="content">
   <h1 class="page-title">Reservations</h1>
 
-  <p class="intro">We take reservations for parties of four and up. Anything smaller, just come by. We always have room for walk ins.</p>
+  <p class="intro">At the moment, we only take reservations for parties of four and up. Anything smaller, just come on by! We always have room for walk ins.</p>
 
-  <iframe class="ot" title="Book a table at Devereaux House on OpenTable" loading="lazy"
-    src="https://www.opentable.com/widget/reservation/mural?restaurantIds=1487626&type=standard&colorThemeId=1&isDarkMode=false&isIframe=true&domain=com&lang=en-US&isNewTab=false&otSource=Restaurant%20website&font=BrandonText&primaryColor=FDF9F5&primaryFontColor=000000&buttonColor=000000&buttonFontColor=FDF9F5&logoPid=0&backgroundPid=0&demo=false&otLogo=standard&loadAllWidgets=false&uuid=267f3599-8b59-4458-bf7b-615cf6337f7f63&theme=standard"></iframe>
+  <div class="ot">
+    <script type="text/javascript" src="https://www.opentable.com/widget/reservation/loader?rid=1487626&type=standard&theme=standard&color=2&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website&cfe=true"></script>
+  </div>
 
-  <p class="walk">Thursday to Saturday, 6 to 10pm. 3739 Nelson St, Riverside.</p>
+  <p class="walk">Thursday to Saturday, 6p- 10p. 3739 Nelson St, Riverside, CA</p>
 </main>
 
 <script>
