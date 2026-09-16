@@ -207,7 +207,6 @@ body{overflow:hidden}
 
   <div class="tagline" aria-live="off">
     <p class="on">A natural wine bar and pizza restaurant in an old house in Riverside, CA.</p>
-    <p>Natural wine, good pizza, great patio. Thursday to Saturday, from six to ten.</p>
   </div>
 </div>
 
@@ -247,13 +246,6 @@ body{overflow:hidden}
     var open=document.body.classList.toggle('menu-open');
     b.setAttribute('aria-expanded',open?'true':'false');
   });}
-  var lines=document.querySelectorAll('.tagline p'),i=0;
-  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(lines.length>1&&!still){
-    setInterval(function(){
-      lines[i].classList.remove('on'); i=(i+1)%lines.length; lines[i].classList.add('on');
-    },5200);
-  }
 })();
 </script>
 
