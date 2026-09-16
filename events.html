@@ -171,7 +171,7 @@ body.menu-open .panel{display:flex}
 .rows.events .side{grid-column:3;font-variant-numeric:tabular-nums}
 .rows.events .desc{grid-column:2 / -1}
 .note{margin:0 0 1.6rem;color:var(--ink-2);font-size:.92em;max-width:32em}
-#upcoming h2{border-top:0;padding-top:0}
+.soon{margin:0;font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.1}
 @media (max-width:760px){
   .rows.events li{grid-template-columns:1fr auto}
   .rows.events .when{grid-column:1 / -1;grid-row:auto;font-size:.92em}
@@ -214,18 +214,7 @@ body.menu-open .panel{display:flex}
 <main class="content">
   <h1 class="page-title">Events</h1>
 
-  <section class="section" id="upcoming">
-    <h2>Events</h2>
-    <ul class="rows events">
-      <li><span class="when">Thu 18 Sep</span><span class="name">Grower Champagne Tasting</span><span class="side">7pm</span><span class="desc">Six pours, walk in, no ticket</span></li>
-      <li><span class="when">Fri 26 Sep</span><span class="name">Live Set: Trio on the patio</span><span class="side">8pm</span><span class="desc">Free, first come</span></li>
-      <li><span class="when">Sat 4 Oct</span><span class="name">Producer Night: Jura</span><span class="side">6:30pm</span><span class="desc">Seated, limited to 24</span></li>
-      <li><span class="when">Thu 9 Oct</span><span class="name">Wine Club Pickup</span><span class="side">6pm</span><span class="desc">Members only, all evening</span></li>
-    </ul>
-  </section>
-
-
-  <p class="note">For a private night of your own, see <a class="line" href="private-events.html">Private Events</a>.</p>
+  <p class="soon">Coming soon.</p>
 </main>
 
 <script>
