@@ -165,6 +165,7 @@ body.menu-open .panel{display:flex}
   .rail{background:linear-gradient(to top,var(--ground) 62%,rgba(253,249,245,0))}
 }
 
+.section h2{border-top:0;padding-top:0}
 </style>
 
 <div class="rail">
@@ -199,14 +200,6 @@ body.menu-open .panel{display:flex}
 <main class="content">
   <h1 class="page-title">Menu</h1>
 
-  <ul class="chips" id="chips">
-    <li><a href="#wine">Wine</a></li>
-    <li><a href="#cocktails">Cocktails</a></li>
-    <li><a href="#beer">Beer</a></li>
-    <li><a href="#pizza">Pizza</a></li>
-    <li><a href="#other">Other Stuff</a></li>
-  </ul>
-
   <section class="section" id="wine">
     <h2>Wine</h2>
     <ul class="rows">
@@ -215,7 +208,6 @@ body.menu-open .panel{display:flex}
       <li><span class="name">Rotating Orange</span></li>
       <li><span class="name">Rotating Rose</span></li>
     </ul>
-    <p style="margin:1rem 0 0;color:var(--ink-2);font-size:.92em">The list rotates weekly. Ask what just landed.</p>
   </section>
 
   <section class="section" id="cocktails">
@@ -269,17 +261,6 @@ body.menu-open .panel{display:flex}
     var open=document.body.classList.toggle('menu-open');
     b.setAttribute('aria-expanded',open?'true':'false');
   });}
-  // light up the chip for the section in view
-  var chips=Array.prototype.slice.call(document.querySelectorAll('.chips a'));
-  var secs=chips.map(function(a){return document.querySelector(a.getAttribute('href'))}).filter(Boolean);
-  if('IntersectionObserver' in window && secs.length){
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(e){ if(e.isIntersecting){
-        chips.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)});
-      }});
-    },{rootMargin:'-30% 0px -60% 0px'});
-    secs.forEach(function(s){io.observe(s)});
-  }
 })();
 </script>
 
