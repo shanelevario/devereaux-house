@@ -1,5 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Devereaux House, a natural wine bar and pizzeria in Riverside, California. Thursday to Saturday from 6pm.">
 <title>Devereaux House</title>
-
+</head>
+<body>
 <style>
 /* Devereaux House site: shared foundation. Inlined into every page by build.py. */
 
@@ -185,8 +192,8 @@ body{overflow:hidden}
 }
 
 @media (max-width:760px){
-  .film{width:min(64vw,300px);left:50%;top:50%;transform:translate(-50%,-50%)}
-  .tagline{display:none}   /* they drop it on phones too, the film and the wordmark carry the page */
+  .film{width:min(60vw,280px);left:50%;top:52%;transform:translate(-50%,-50%)}
+  .tagline{left:var(--pad);right:calc(var(--pad) + 3.6rem);font-size:clamp(1.55rem,7.2vw,2.1rem)}
 }
 </style>
 
@@ -249,3 +256,6 @@ body{overflow:hidden}
   }
 })();
 </script>
+
+</body>
+</html>
