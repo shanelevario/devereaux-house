@@ -158,6 +158,9 @@ body.menu-open .panel{display:flex}
 .rows .name{grid-column:1}
 .rows .side{grid-column:2;grid-row:1;color:var(--ink-2);white-space:nowrap}
 .rows .desc{grid-column:1 / -1;color:var(--ink-2);font-size:.92em;line-height:1.45}
+.rows .desc p{margin:0}
+.rows .desc a{text-decoration:underline;text-underline-offset:.2em;text-decoration-thickness:1px}
+.section h2{border-top:0;padding-top:0}
 
 @media (max-width:760px){
   .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-right:calc(-1 * var(--pad));padding-right:calc(var(--pad) + 3.2rem)}
@@ -165,6 +168,21 @@ body.menu-open .panel{display:flex}
   .page-title + .chips{margin-top:.5rem}
   /* the wordmark rides over the list on phones like theirs, so give it a little bone to sit on */
   .rail{background:linear-gradient(to top,var(--ground) 62%,rgba(253,249,245,0))}
+}
+
+/* ---------- events rows: date | what | time ---------- */
+.rows.events li{grid-template-columns:7.5rem 1fr auto}
+.rows.events .when{grid-column:1;grid-row:1 / span 2;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.rows.events .name{grid-column:2}
+.rows.events .side{grid-column:3;font-variant-numeric:tabular-nums}
+.rows.events .desc{grid-column:2 / -1}
+.soon{margin:0;font-size:clamp(1.55rem,2.6vw,2.1rem);line-height:1.1}
+@media (max-width:760px){
+  .rows.events li{grid-template-columns:1fr auto}
+  .rows.events .when{grid-column:1 / -1;grid-row:auto;font-size:.92em}
+  .rows.events .name{grid-column:1}
+  .rows.events .side{grid-column:2;grid-row:2}
+  .rows.events .desc{grid-column:1 / -1}
 }
 
 .rows.events li{grid-template-columns:7.5rem 1fr auto}
