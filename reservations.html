@@ -185,10 +185,26 @@ body.menu-open .panel{display:flex}
   .rows.events .desc{grid-column:1 / -1}
 }
 
+/* ---------- forms (private events, big party requests) ---------- */
+.pe{display:flex;flex-direction:column;gap:1.1rem;max-width:26em;margin-top:2.4rem}
+.pe-h{margin:0 0 .2rem;font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.1}
+.pe label{display:flex;flex-direction:column;gap:.35rem;font-size:.92em;color:var(--ink-2)}
+.pe input,.pe select,.pe textarea{font:inherit;color:var(--ink);background:var(--ground);border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:.45em 0;width:100%}
+.pe select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat;padding-right:1.6em}
+.pe textarea{resize:vertical;border:1px solid var(--ink);padding:.6em .7em;margin-top:.2rem}
+.pe input:focus,.pe select:focus,.pe textarea:focus{outline:0;border-color:var(--ink);box-shadow:0 1px 0 var(--ink)}
+.pe .two{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.button{font:inherit;padding:.65em 1.6em;border:1px solid var(--ink);background:var(--ink);color:var(--ground);cursor:pointer;align-self:flex-start}
+.sent{margin:0 0 .5rem;padding:.9em 1em;border:1px solid var(--ink)}
+.quiet-note{margin:1.6rem 0 0;color:var(--ink-2);font-size:.92em;max-width:32em}
+@media (max-width:480px){.pe .two{grid-template-columns:1fr}}
+
 .intro{max-width:32em;margin:0 0 1.6rem}
 .ot{width:100%;max-width:400px;margin:0 0 1.6rem}
 .ot iframe{max-width:100%}
 .walk{color:var(--ink-2);font-size:.92em;max-width:32em;margin:0}
+.big{margin-top:3.2rem;padding-top:2rem;border-top:1px solid var(--rule)}
+.big .pe{margin-top:1.6rem}
 </style>
 
 <div class="rail">
@@ -231,6 +247,24 @@ body.menu-open .panel{display:flex}
   </div>
 
   <p class="walk">Thursday to Saturday, 6p- 10p. 3739 Nelson St, Riverside, CA</p>
+
+  <div class="big">
+    <h2 class="pe-h">Parties bigger than eight</h2>
+    <p>OpenTable takes parties of four to eight. If you have a bigger party, we can seat up to 20. Send us the details here and we'll get back to you to confirm.</p>
+    <form class="pe" action="#" method="post">
+      <input type="hidden" name="contact[form]" value="Big party request">
+      <label>Your name<input type="text" name="contact[name]" required></label>
+      <label>Email<input type="email" name="contact[email]" required></label>
+      <label>Phone<input type="tel" name="contact[phone]"></label>
+      <div class="two">
+        <label>Date<input type="date" name="contact[date]" required></label>
+        <label>Time<select name="contact[time]"><option>6:00pm</option><option>6:30pm</option><option>7:00pm</option><option>7:30pm</option><option>8:00pm</option><option>8:30pm</option></select></label>
+      </div>
+      <label>How many people<input type="number" name="contact[party size]" min="9" max="20" inputmode="numeric" placeholder="9 to 20" required></label>
+      <label>Anything else we should know<textarea name="contact[body]" rows="4"></textarea></label>
+      <button type="submit" class="button">Send request</button>
+    </form>
+  </div>
 </main>
 
 <script>
