@@ -240,7 +240,7 @@ body.menu-open .panel{display:flex}
 <main class="content">
   <h1 class="page-title">Reservations</h1>
 
-  <p class="intro">We take reservations for parties of 2 to 12 right here through OpenTable. Walk ins are always welcome too, we always have room.</p>
+  <p class="intro">We take reservations for parties of 2 to 12 right here through OpenTable. Only about half our tables are set aside for reservations, so if nothing shows as available, just walk in. We always keep room for people without one.</p>
 
   <div class="ot">
     <script type="text/javascript" src="https://www.opentable.com/widget/reservation/loader?rid=1487626&type=standard&theme=standard&color=2&dark=false&iframe=true&domain=com&lang=en-US&newtab=false&ot_source=Restaurant%20website&cfe=true"></script>
@@ -250,7 +250,7 @@ body.menu-open .panel{display:flex}
 
   <div class="big">
     <h2 class="pe-h">Bigger parties</h2>
-    <p>If reservations are unavailable and you're looking for a bigger party, please fill out the form below. We can host groups of up to 40, and we'll get back to you to confirm.</p>
+    <p>Have a party of 13 or more? Fill out the form below and we'll get back to you to confirm.</p>
     <form class="pe" action="#" method="post">
       <input type="hidden" name="contact[form]" value="Big party request">
       <label>Your name<input type="text" name="contact[name]" required></label>
@@ -260,7 +260,7 @@ body.menu-open .panel{display:flex}
         <label>Date<input type="date" name="contact[date]" required></label>
         <label>Time<select name="contact[time]"><option>6:00pm</option><option>6:30pm</option><option>7:00pm</option><option>7:30pm</option><option>8:00pm</option><option>8:30pm</option></select></label>
       </div>
-      <label>How many people<input type="number" name="contact[party size]" min="2" max="40" inputmode="numeric" required></label>
+      <label>How many people<input type="number" name="contact[party size]" min="13" max="40" inputmode="numeric" placeholder="13 or more" required></label>
       <label>Anything else we should know<textarea name="contact[body]" rows="4"></textarea></label>
       <button type="submit" class="button">Send request</button>
     </form>
